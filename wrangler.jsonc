@@ -6,3 +6,5 @@
     "directory": "./dist"
   }
 }
+// wrangler.jsonc
+"name": "my-portfolio",
