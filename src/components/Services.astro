@@ -1,0 +1,18 @@
+---
+import { services } from '../data/site';
+---
+
+<section id="servicos" class="section-alt">
+  <div class="container">
+    <p class="eyebrow">O que eu faço</p>
+    <h2>Serviços</h2>
+    <div class="grid grid-3">
+      {services.map((service) => (
+        <div class="card">
+          <h3>{service.title}</h3>
+          <p>{service.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

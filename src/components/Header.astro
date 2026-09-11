@@ -1,0 +1,68 @@
+---
+import { business } from '../data/site';
+---
+
+<header class="header">
+  <div class="container header-inner">
+    <a href="#top" class="logo">{business.name}</a>
+    <nav class="nav">
+      <a href="#servicos">Serviços</a>
+      <a href="#portfolio">Portfólio</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato" class="btn">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(11, 15, 20, 0.85);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 1rem;
+  }
+
+  .logo {
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .nav a:not(.btn) {
+    text-decoration: none;
+    color: var(--color-text-muted);
+  }
+
+  .nav a:not(.btn):hover {
+    color: var(--color-text);
+  }
+
+  .nav .btn {
+    padding: 0.5rem 1.1rem;
+  }
+
+  @media (max-width: 640px) {
+    .nav {
+      gap: 0.75rem;
+    }
+    .nav a:not(.btn) {
+      display: none;
+    }
+  }
+</style>

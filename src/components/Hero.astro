@@ -1,0 +1,45 @@
+---
+import { business } from '../data/site';
+
+const whatsappHref = `https://wa.me/${business.whatsapp}`;
+---
+
+<section id="top" class="hero">
+  <div class="container hero-inner">
+    <p class="eyebrow">Filmmaker · Drone · Imóveis</p>
+    <h1>{business.tagline}</h1>
+    <p class="lead">{business.description}</p>
+    <div class="actions">
+      <a href="#portfolio" class="btn">Ver Portfólio</a>
+      <a href={whatsappHref} class="btn btn-outline" target="_blank" rel="noopener">Falar no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    padding-block: 6rem 4rem;
+    background:
+      radial-gradient(circle at top right, rgba(212, 165, 74, 0.12), transparent 55%),
+      var(--color-bg);
+  }
+
+  .hero-inner {
+    max-width: 720px;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+  }
+
+  .lead {
+    font-size: 1.1rem;
+  }
+
+  .actions {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+  }
+</style>

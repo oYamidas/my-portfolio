@@ -1,0 +1,43 @@
+---
+import { business } from '../data/site';
+
+const whatsappHref = `https://wa.me/${business.whatsapp}`;
+---
+
+<section id="contato">
+  <div class="container contact-inner">
+    <p class="eyebrow">Vamos conversar</p>
+    <h2>Solicite um orçamento</h2>
+    <p>
+      Me chame para combinar data, local e o tipo de vídeo ou foto que você precisa para o seu
+      imóvel.
+    </p>
+    <div class="links">
+      <a href={whatsappHref} class="btn" target="_blank" rel="noopener">WhatsApp</a>
+      <a href={`mailto:${business.email}`} class="btn btn-outline">{business.email}</a>
+      <a href={business.instagram} class="btn btn-outline" target="_blank" rel="noopener">Instagram</a>
+    </div>
+    <p class="location">{business.location}</p>
+  </div>
+</section>
+
+<style>
+  .contact-inner {
+    max-width: 640px;
+    text-align: center;
+    margin-inline: auto;
+  }
+
+  .links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-block: 1.5rem;
+  }
+
+  .location {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+  }
+</style>

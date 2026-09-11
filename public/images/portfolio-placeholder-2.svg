@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#121821"/>
+  <rect x="0.5" y="0.5" width="639" height="359" fill="none" stroke="#2a3444"/>
+  <circle cx="320" cy="150" r="28" fill="none" stroke="#d4a54a" stroke-width="3"/>
+  <path d="M308 138 L338 150 L308 162 Z" fill="#d4a54a"/>
+  <text x="320" y="220" font-family="Arial, sans-serif" font-size="18" fill="#a7b0bd" text-anchor="middle">Apartamento com Vista</text>
+  <text x="320" y="246" font-family="Arial, sans-serif" font-size="13" fill="#5f6b7a" text-anchor="middle">Substitua por foto ou vídeo real</text>
+</svg>

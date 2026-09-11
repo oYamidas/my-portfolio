@@ -1,0 +1,17 @@
+---
+import { about, business } from '../data/site';
+---
+
+<section id="sobre" class="section-alt">
+  <div class="container about-inner">
+    <p class="eyebrow">{about.heading}</p>
+    <h2>{business.name}</h2>
+    {about.body.map((paragraph) => <p>{paragraph}</p>)}
+  </div>
+</section>
+
+<style>
+  .about-inner {
+    max-width: 640px;
+  }
+</style>

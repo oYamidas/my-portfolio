@@ -1,0 +1,71 @@
+---
+import { portfolio } from '../data/site';
+---
+
+<section id="portfolio">
+  <div class="container">
+    <p class="eyebrow">Trabalhos recentes</p>
+    <h2>Portfólio</h2>
+    <div class="grid grid-2">
+      {portfolio.map((item) => (
+        <a
+          class="item"
+          href={item.videoUrl || '#contato'}
+          target={item.videoUrl ? '_blank' : undefined}
+          rel={item.videoUrl ? 'noopener' : undefined}
+        >
+          <img src={item.thumbnail} alt={item.title} />
+          <div class="item-info">
+            <span class="tag">{item.type}</span>
+            <h3>{item.title}</h3>
+            <p>{item.location}</p>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .item {
+    display: block;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: transform 0.15s ease;
+  }
+
+  .item:hover {
+    transform: translateY(-3px);
+  }
+
+  .item img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: var(--color-bg-alt);
+  }
+
+  .item-info {
+    padding: 1.25rem;
+  }
+
+  .item-info h3 {
+    margin: 0.25rem 0;
+  }
+
+  .item-info p {
+    margin: 0;
+  }
+
+  .tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-accent);
+    font-weight: 600;
+  }
+</style>
